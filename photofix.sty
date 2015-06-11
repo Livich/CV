@@ -1,0 +1,10 @@
+\makeatletter
+\@ifpackageloaded{moderncvstylebanking}{%
+\let\oldmakecvtitle\makecvtitle
+\renewcommand*{\makecvtitle}{%
+  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}%
+  \oldmakecvtitle%
+}%
+}{%
+}
+\makeatother
