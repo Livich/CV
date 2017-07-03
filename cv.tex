@@ -1,24 +1,11 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
-
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-
-% moderncv themes
-\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{grey}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 \usepackage{photofix}
-% character encoding
-%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
-\newfontface\lserif{Microsoft Sans Serif}
+\newfontface\lserif{Arial}
 
 \newcommand{\Csh}{C{\lserif\#}}
 \newcommand{\Cpp}{C{\lserif{++}}}
@@ -26,16 +13,14 @@
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
 \geometry{left=1cm}
-\geometry{right=1cm}
-\geometry{top=1cm}
-\geometry{bottom=1cm}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\geometry{right=0.5cm}
+\geometry{top=0.5cm}
+\geometry{bottom=0.5cm}
 
 % personal data
 \name{Serhii}{Lilikovych}
-%\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{Ukraine}{Kharkov}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+%\title{}                               % optional, remove / comment the line if not wanted
+\address{Ukraine}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+38~(067)~317~29~68}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \email{sergiy.lilikovych@gmail.com}                               % optional, remove / comment the line if not wanted
 \homepage{lilikovych.name}                         % optional, remove / comment the line if not wanted
@@ -43,94 +28,54 @@
 \photo[3cm][0.4pt]{photo.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
 
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-%%\iffalse %%Education 
+%%Education 
 \section{Education}
-
-\cventry{2000--2011}{General secondary education}{Gymnasium \textnumero 1}{Rovenky, Ukraine}{English language \& mathematics class}{
-	Graduated with certificate of outstanding success in the study of informatics
-}
-
-\cventry{2011--2015}{Higher education}{National Technical University "Kharkov Polytechnical Institute"}{Kharkov, Ukraine}{Department of Computer-Aided Management Systems}{
-	Qualification "bachelor of software engineering" was obtained. Diploma B15\textnumero 019688~\href{inforesurs.gov.ua/info-per/inforesurs-per-doc.php}{\underline{\homepagesymbol check}}
-}
-
-\cventry{2015--present}{Higher education}{National Technical University "Kharkov Polytechnical Institute"}{Kharkov, Ukraine}{Department of Software Engineering and Information Technology Management}{}
-%%\fi %% /Education
-
-\section{Technical skills}
-\subsection{Programming}
-\cvitem{PHP 5}{Advanced skills. Is used for hobby development. }
-%\cvitem{\LaTeXe{}}{Advanced skills. Is constantly used. }
-\cvitem{Python 3}{Basic skills. PL/Python development experience. University and hobby development. }
-\cvitem{\Csh}{Pre-intermediate skills. Windows 8 Store application development experience. Is used for hobby development. }
-\cvitem{\Cpp}{Basic skills. Is used for hobby development.}
-%\cvitem{Java}{Basic skills. A number of Android apps were developed.}
-
-\subsection{Experience}
-\subsection{<<AnyBibTeX>> Chrome extension~\href{https://chrome.google.com/webstore/detail/any-bibtex/pcneplpbjokfakcgcihplkaomiolelim}{\homepagesymbol}}
-
-Copies BibTeX reference on book from Google's bookstore. Also works for any another website.
-
-\begin{itemize}%
-	\item Pure JavaScript, HTML5, CSS3 used;
-	\item Google Books API interaction.
-	%%\item Multi-language support.
-\end{itemize}
-
-\subsection{StuckPixel Android application~\href{https://play.google.com/store/apps/details?id=com.livich.stuckpixel}{\homepagesymbol}}
-
-Application checks and heals screens.
-
-\begin{itemize}%
-	\item Android SDK, JQuery mobile used.
-	%\item Multi-language support.
-\end{itemize}
-
-\subsection{PassGen Android application~\href{https://play.google.com/store/apps/details?id=com.livich.passgen}{\homepagesymbol}}
-
-Password generator.
-
-\begin{itemize}%
-	\item Android SDK, JQuery mobile, Ease.js used.
-\end{itemize}
-
+%FIXME: too much info
 \iffalse
-	\subsection{Course Work of 5\textsuperscript{th} semester in NTU "KhPI"~\href{https://github.com/Livich/cw31}{\githubsocialsymbol}}
-	\begin{itemize}%
-	\item PostgreSQL DBMS used. Dzhabrailova's multi-criteria ranking was implemented on the DBMS side using PL/Python;
-	\item Previously developed PHP5 micro-framework used.
-	%\item SMARTY, CSS3, AJAX and HTML5 additionally used.
-	\end{itemize}
+  \cventry{2000--2011}{General secondary education}{Gymnasium \textnumero 1}{Rovenky, Ukraine}{English language \& mathematics class}{Graduated with certificate of outstanding success in the study of informatics}
+  
+	\cventry{2011--2015}{Higher education}{National Technical University "Kharkov Polytechnic Institute"}{Kharkov, Ukraine}{Department of Computer-Aided Management Systems}{Qualification "bachelor of software engineering" was obtained. Diploma B15\textnumero 019688~\href{inforesurs.gov.ua/info-per/inforesurs-per-doc.php}{\underline{\homepagesymbol check}}}
+
+  \cventry{2015--2017}{Higher education}{National Technical University "Kharkov Polytechnic Institute"}{Kharkov, Ukraine}{Department of Software Engineering and Information Technology Management}{Graduated with distinction}
 \fi
 
-\subsection{Unofficial \LaTeXe{} style package for Computer-Aided Management Systems Department of NTU "KhPI"~\href{https://github.com/Livich/stvuz\_KhPI\_XeLaTeX}{\githubsocialsymbol}}
-Full implementation of original style-setting with some tools. Fully documented. Licensed under CC-BY-SA.
+\cventry{2011--2017}{Higher education}{National Technical University "Kharkov Polytechnic Institute"}{Kharkov, Ukraine}{Department of Software Engineering and Information Technology Management}{Qualification "operations and applied software analyst" was obtained. Diploma M17\textnumero 06059~\href{inforesurs.gov.ua/info-per/inforesurs-per-doc.php}{\underline{\homepagesymbol check}}. Graduated with honours.}
 
+\section{Technical skills}
+
+\subsection{Programming}
+  \cvitem{PHP}{About three years of business experience.}
+  \cvitem{Python 3}{Basic skills. PL/Python development experience. University and hobby development, freelance experience.}
+  \cvitem{Java(Android), \Cpp, \LaTeXe}{Hobby development. University and hobby development, no business experience.}
+
+\section{Job experience}
+
+  \cventry{February--March 2011}{Internship}{Sigma Software}{Kharkov, Ukraine}{Bachelor's graduation practice at KhPI}{Google Drive clone file storage development. Results were published on~\href{https://github.com/Livich/diploma-practice-sigma}{GitHub~\githubsocialsymbol}.}
+
+  \cventry{October 2015 -- June 2016}{Software engineer}{V.N. Karazin Kharkov National University}{Kharkov, Ukraine}{Department of Web-Communications}{Website maintenance and development. Bulk mail distribution system development~\href{https://github.com/Livich/mailer}{\githubsocialsymbol}.}
+
+  \cventry{February -- April, June 2017}{Internship}{Academy SMART~\href{https://jobs.dou.ua/companies/academy-smart/}{\homepagesymbol}}{Kharkov, Ukraine}{Master's graduation practice at KhPI}{\href{https://www.reviewbuzz.com/}{ReviewBuzz~\homepagesymbol} maintenance and development. Moodle CMS plugin development.}
+
+\section{Pet projects \& Code samples}
+
+  \subsection{<<AnyBibTeX>> Chrome extension~\href{https://chrome.google.com/webstore/detail/any-bibtex/pcneplpbjokfakcgcihplkaomiolelim}{\homepagesymbol}~\href{https://github.com/Livich/AnyBibTeX}{\githubsocialsymbol}}
+  Obtains BibTeX reference from a number of libraries. JS, HTML5, CSS3. Google Books, IEEEXplore, Wikipedia API integration. Multi-lingual UI.
+
+  \subsection{StuckPixel Android application~\href{https://play.google.com/store/apps/details?id=com.livich.stuckpixel}{\homepagesymbol}}
+  Application checks and heals AMOLED screens. Java, JQuery Mobile. Multi-lingual UI.
+
+  \subsection{PyReToggl~\href{https://github.com/Livich/pyretoggl}{\githubsocialsymbol}}
+  Unofficial client for CyberHull's~\href{http://cyberhull.com/}{\homepagesymbol} ReToggl time tracking service written in pure Python 3. Cross-platform console application with TeamWork API integration.
 
 \section{Personal Information}
-\cvitem{Date of birth}{30 August 1993}
-%\cvitem{Place of bitrh}{Rovenky, Ukraine}
-\cvitem{Languages}{English (intermediate), Russian (native), Ukrainian (native)}
-\cvitem{Fields of Interest}{low-level development, embedded software, information security, web, computer science}
-%\cvitem{Marital status}{single}
-\cvitem{Foreign passport}{valid till 22 March 2023}
 
-
+  \cvitem{Date of birth}{30 August 1993}
+  \cvitem{Languages}{English (intermediate),  Ukrainian (native), Russian (native)}
+  \cvitem{Fields of Interest}{low-level development, embedded software, information security, web, computer science}
+  \cvitem{Foreign passport}{valid till May 2027 (biometric)}
+  
 \end{document}
